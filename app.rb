@@ -12,7 +12,6 @@ get '/' do
 end
 
 get '/contacts/:id' do
-  id = params["id"]
-  @contact = Contact.find(id)
+  @contact = Contact.find(params["id"])
   erb :show
 end
